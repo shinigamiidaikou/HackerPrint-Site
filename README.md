@@ -12,7 +12,7 @@ A site created to show stylish terminal-like interface that displays text with a
 ## Instructions
 
 1. Can be viewed by cloning the repository and opening `index.html` in your web browser.
-2. Github Pages: [currently waiting to be built]()
+2. Github Pages: [https://shinigamiidaikou.github.io/HackerPrint-Site/](https://shinigamiidaikou.github.io/HackerPrint-Site/)
 
 ## Customization
 
