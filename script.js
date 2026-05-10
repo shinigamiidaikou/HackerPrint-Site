@@ -1,35 +1,47 @@
-const text = "Hello World!";
+/*
+MIT License
+Copyright (c) 2026 Shafin Ahmed
+See LICENSE file for details.
+*/
+
+const text = "Hello World!\nI'm Shafin Ahmed.\nNice to meet you!";
 const hackerTextElement = document.getElementById('hackerText');
+
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 async function printHackerStyle() {
     let displayText = '';
-    
-    // Add blinking cursor
+
     const cursor = document.createElement('span');
     cursor.innerHTML = '▋';
     cursor.style.animation = 'blink 1s infinite';
+    hackerTextElement.style.whiteSpace = 'pre';
     hackerTextElement.appendChild(cursor);
 
     for (let i = 0; i < text.length; i++) {
-        if (text[i] === ' ') {
-            displayText += ' ';
-            hackerTextElement.textContent = displayText;
-            hackerTextElement.appendChild(cursor);
-            await new Promise(resolve => setTimeout(resolve, 20)); // Reduced from 50
-            continue;
+        const char = text[i];
+
+        if (char !== ' ') {
+            const count = Math.floor(Math.random() * 35) + 1;
+            for (let j = 0; j < count; j++) {
+                const randomChar = String.fromCharCode(Math.floor(Math.random() * 95) + 32);
+                hackerTextElement.textContent = displayText + randomChar;
+                hackerTextElement.appendChild(cursor);
+                await sleep(10);
+            }
         }
 
-        for (let j = 0; j < 15; j++) {
-            const randomChar = String.fromCharCode(Math.floor(Math.random() * (126 - 32 + 1)) + 32);
-            hackerTextElement.textContent = displayText + randomChar;
-            hackerTextElement.appendChild(cursor);
-            await new Promise(resolve => setTimeout(resolve, 18)); // Reduced from 25
-        }
-
-        displayText += text[i];
+        displayText += char;
         hackerTextElement.textContent = displayText;
         hackerTextElement.appendChild(cursor);
-        await new Promise(resolve => setTimeout(resolve, 15)); // Reduced from 50
+
+        if (i + 1 < text.length && text[i + 1] === '\n') {
+            i++;
+            displayText += '\n';
+            hackerTextElement.textContent = displayText;
+            hackerTextElement.appendChild(cursor);
+            await sleep(1500);
+        }
     }
 }
 

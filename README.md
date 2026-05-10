@@ -5,38 +5,23 @@ A site created to show stylish terminal-like interface that displays text with a
 ## Features
 
 - Terminal-style interface
-- Animated text scrambling effect
+- Animated text scrambling effect with various intervals
 - Blinking cursor
 - Retro scanline effect
-- Monospace font for authentic terminal feel
 
-## Demo
+## Instructions
 
-The effect starts automatically when the page loads, displaying "Hello World!" with a hacker-style animation.
-
-## Usage
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/HackerPrint-Project.git
-```
-
-2. Open `index.html` in your web browser
+1. Can be viewed by cloning the repository and opening `index.html` in your web browser.
+2. Github Pages: [currently waiting to be built]()
 
 ## Customization
 
-To change the displayed text, modify the `text` constant in `script.js`:
+The displayed text can be modified by changing the `text` constant in `script.js`:
 
 ```javascript
 const text = "Your custom text here";
 ```
 
-## Technologies Used
-
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-
 ## License
 
-MIT
+[MIT (2026)](LICENSE)

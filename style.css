@@ -1,5 +1,5 @@
 body {
-    background-color: #2e3436;
+    background-color: #202020;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -14,20 +14,24 @@ body {
 }
 
 .terminal-container {
-    background-color: #2d2d2d;
+    background-color: #040404;
     width: 80%;
     max-width: 800px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #a2a2a2;
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 30px 25px rgba(0, 0, 0, 0.3);
     overflow: hidden;
 }
 
 .terminal-header {
-    background-color: #3f3f3f;
-    padding: 8px 16px;
+    background-color: #313131;
+    padding: 8px 10px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #4a4a4a;
+    border-bottom: 1px solid #626262;
+    position: relative;
 }
 
 .terminal-buttons {
@@ -48,16 +52,17 @@ body {
 .maximize { background-color: #27c93f; }
 
 .terminal-title {
-    color: #dcdcdc;
-    font-size: 14px;
-    flex-grow: 1;
-    text-align: center;
-    font-weight: 600;
+    color: #e1e1e1;
+    font-size: 15px;
+    font-weight:bolder;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .terminal-content {
-    padding: 20px;
-    background-color: #2d2d2d;
+    padding: 10px;
+    background-color: #111111;
     min-height: 300px;
     display: flex;
     align-items: flex-start;
@@ -66,8 +71,7 @@ body {
 .prompt {
     color: #87cf3e;
     margin-right: 8px;
-    font-weight: bold;
-    font-weight: 700;
+    font-weight:bolder;
 }
 
 #hackerText {
